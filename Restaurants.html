@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title> Discover Riyadh </title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <div class="header">
+        <img src="Riyadh.jpeg" alt="A picture of Riyadh" width="1350" height="200"> 
+    </div>
+    <div class="nav_menu">
+        
+        <ul>
+            <li> <a href="index.html">Home</a></li>
+            <li> <a href="AboutUs.html">About Us</a></li>
+            <li> <a href="Attraction.html">Attractions</a></li>
+            <li> <a href="Restaurants.html">Restaurants</a></li>
+            <li> <a href="Gallery.html">Gallery</a></li>
+            <li> <a href="ContactUs.html">Contact Us</a></li>
+        </ul>
+    </div>
+    <br>
+   <h1> Riyadh Restaurants  </h1>
+    <hr>
+    <h2> Restaurants</h2>
+    <div class="gallery"> 
+        <div onclick="showImages('ASIB')">
+    <img src ="aseeb.jpeg" alt="ASIB" width="500" height="500" >
+   <p> <h2> ASIB</p> </h2>
+        </div>
+        <div onclick="showImages('nozomi')">
+    <img src="NOZOMI.jpeg" alt="NOZOMI" width="500" height="500">  
+    <p> <h2> NOZOME </p></h2>
+        </div>
+        <div onclick="showImages('MAMA NOURA')">
+    <img src="mamaNorah.jpeg" alt="NOZOMI" width="500" height="500">  
+    <p> <h2> MAMA NOURA </p></h2>
+        </div>
+    <div onclick="showImages('LUSIN')">
+    <img src="Lusin.jpeg" alt="LUSIN" width="500" height="500">
+    <p><h2> LUSIN </p></h2>
+    <hr>
+    </div>
+    </div>
+    <div id="moreImages"></div>
+    <hr>
+
+    <h2 class="Contact-title"> More about: </h2>
+    <form>
+        Choose Place:
+        <select onchange="showImages(this.value)">
+            <option value="">--choose--</option>
+            <option value="ASIB"> ASIB</option>
+            <option value="NOZOMI"> NOZOMI </option>
+            <option value="LUSIN"> LUSIN</option>
+            <option value="MAMA NOURA"> MAMA NOURA</option>
+        </select><br><br>
+        <input type="submit" value="Send">
+<div id="moreImages"></div>
+
+    </form>
+    <script>
+
+function showImages(place) {
+
+    let box = document.getElementById("moreImages");
+
+    if (place === "ASIB") {
+
+        box.innerHTML = `
+
+
+            <h3>More about ASIB</h3>
+
+            <img src="A1.jpeg" width="300" height="300">
+            <img src="A22.jpeg" width="300" height="300">
+<p><h4> 
+                <br> A traditional Saudi restaurant that serves authentic Najdi food in a modern style.<br>
+               Experience the authentic taste of Saudi heritage in every bite.</P>
+        `;
+
+    }
+
+    if (place === "NOZOMI") {
+
+        box.innerHTML = `
+
+            <h3>More about NOZOMI</h3>
+
+            <img src="n22.jpeg" width="300" height="300">
+
+            <img src="n11.jpeg" width="300" height="300">
+            <p><h4> 
+                <br> A luxury Japanese restaurant known for sushi, seafood, and elegant dining experience.<br>
+                 Where luxury meets the art of Japanese cuisine </P>
+    
+
+        `;
+
+    }
+
+    if (place === "MAMA NOURA") {
+
+        box.innerHTML = `
+
+            <h3>More about MAMA NOURA</h3>
+
+            <img src="m1.jpeg" width="300" height="300">
+
+            <img src="m2.jpeg" width="300" height="300"> 
+        
+  <p>  <h4>
+ <br>A famous fast-food restaurant in Riyadh, popular for shawarma, sandwiches, and fresh juices.<br>
+The iconic Riyadh spot everyone loves for a quick delicious meal.</p>
+
+
+            
+
+        `;
+
+    }
+    if (place === "LUSIN") {
+
+        box.innerHTML = `
+
+            <h3>More about LUSIN</h3>
+
+            <img src="l1.jpeg" width="300" height="300">
+
+            <img src="l2.jpeg" width="300" height="300"> 
+        
+  <p>  <h4>
+ <br>An Armenian restaurant with a cozy atmosphere, known for grilled dishes and traditional recipes.<br>
+A warm Armenian dining experience full of rich flavors and elegance.</p>
+
+
+            
+
+        `;
+
+    }
+
+}
+
+</script>
+            
+<hr>
+  
+     <div class="footer">
+        <p> Student names: Shahad Almuhaisen,Joury Alkhalifa,Samu Alamodi, and Nourah Alshwairkh </p>
+        <p> Course: CIS201</p>
+        <p> Credits: @ Alyamamah University 2026</p>
+    </div>
+</body>
+</html>

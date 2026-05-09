@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title> Discover Riyadh </title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="header">
+        <img src="Riyadh.jpeg" alt="A picture of Riyadh" width="1350" height="200"> 
+    </div>
+    <div class="nav_menu">
+        
+        <ul>
+            <li> <a href="index.html">Home</a></li>
+            <li> <a href="AboutUs.html">About Us</a></li>
+            <li> <a href="Attraction.html">Attractions</a></li>
+            <li> <a href="Restaurants.html">Restaurants</a></li>
+            <li> <a href="Gallery.html">Gallery</a></li>
+            <li> <a href="ContactUs.html">Contact Us</a></li>
+        </ul>
+    </div>
+    <br>
+    <h1> Riyadh Guide  </h1>
+    <hr>
+    <h2> Gallery</h2>
+    <div class="gallery"> 
+        <div onclick="showImages('National Museum')">
+    <img src ="NM.jpeg" alt="N1" width="500" height="500">
+    <h2> The National Museum </h2>
+        </div>
+        <div onclick="showImages('Naila')">
+    <img src="N1.jpeg"  class="center" alt="Naila" width="500" height="500">
+     <h2>Naila Art Gallery</h2>
+        </div>
+    <div onclick="showImages('JAX')">
+    <img src="JAX.jpeg" alt="JAX1" width="500" height="500">
+    <h2>  JAX District in Diriyah</h2>
+    <hr>
+    </div>
+    </div>
+    <div id="moreImages"></div>
+    <hr>
+
+    <h2 class="Contact-title"> More pictures: </h2>
+    <form>
+        Choose Place:
+        <select onchange="showImages(this.value)">
+            <option value="">--Choose--</option>
+            <option value="National Museum"> National Museum</option>
+            <option value="Naila"> Naila</option>
+            <option value="JAX"> JAX</option>
+        </select><br><br>
+    
+        <div id="showImages"></div>
+
+    </form>
+    <script>
+
+function showImages(place) {
+
+    let box = document.getElementById("moreImages");
+
+    if (place === "National Museum") {
+
+        box.innerHTML = `
+
+            <h3>More Pictures of The National Museum</h3>
+
+            <img src="N2.jpeg" width="350">
+
+            <img src="N3.jpeg" width="370">
+<p><h4> 
+                
+               
+        `;
+
+    }
+
+    if (place === "Naila") {
+
+        box.innerHTML = `
+
+            <h3>More Pictures of Naila Art Gallery </h3>
+
+            <img src="a2.jpeg " width="310">
+
+            <img src="a3.jpeg" width="250">
+            <p><h4> 
+            
+    
+
+        `;
+
+    }
+
+    if (place === "JAX") {
+
+        box.innerHTML = `
+
+            <h3>More Pictures of JAX District in Diriyah</h3>
+
+            <img src="JAX2.jpeg" width="300">
+
+            <img src="JAX3.jpeg" width="340"> 
+        
+  <p>  <h4>
+            
+
+        `;
+
+    }
+
+}
+</script>
+<hr>
+
+    <div class="footer">
+       <p> Student names: Shahad Almuhaisen,Joury Alkhalifa,Samu Alamodi, and Nourah Alshwairkh </p>
+        <p> Course: CIS201</p>
+        <p> Credits: @ Alyamamah University 2026</p>
+    </div>
